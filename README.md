@@ -416,10 +416,10 @@ En entornos empresariales complejos, gestionar múltiples proyectos simultáneam
 </html>
 
 
----
 ## 📄 Código Fuente
 
 ### `style.csss`
+```
 
 ```css
 
@@ -829,7 +829,7 @@ body.dark-mode .litepicker button.button-reset { color: var(--text-muted-dark) !
 }
 ---
 
-
+```
 ---
 ## 📄 Código Fuente
 

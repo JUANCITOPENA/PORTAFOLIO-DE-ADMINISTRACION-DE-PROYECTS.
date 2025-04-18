@@ -24,128 +24,82 @@ En entornos empresariales complejos, gestionar múltiples proyectos simultáneam
 *   💪 **Optimización de Recursos:** Visualización de la carga de trabajo por gerente y empleado para una mejor asignación.
 
 ---
+# 🚀 Proyecto de Visualización de Datos
 
-### ✨ Características Principales
+## ✨ Características Principales
 
-*   **KPIs Clave:**
-    *   `- [x]` Número total de proyectos.
-    *   `- [x]` Horas totales invertidas y completadas.
-    *   `- [x]` Presupuesto total vs. Gasto total.
-    *   `- [x]` ROI promedio (real o estimado).
-    *   `- [x]` Satisfacción promedio del cliente.
-    *   `- [x]` Carga de trabajo promedio por empleado (basada en horas asignadas).
-*   **Filtros Dinámicos:**
-    *   `- [x]` Filtrar proyectos por Estado (En Progreso, Completado, Retrasado).
-    *   `- [x]` Filtrar por Tipo de Proyecto (Estratégico, Tecnológico, Operativo).
-    *   `- [x]` Filtrar por Gerente de Proyecto.
-    *   `- [x]` Filtrar por Nivel de Prioridad (Alta, Media, Baja).
-    *   `- [x]` Filtrar por Nivel de Riesgo (Alto, Medio, Bajo).
-    *   `- [x]` Filtrar por Rango de Fechas de finalización planificada (Usando Litepicker).
-*   **Visualizaciones Interactivas (con [Chart.js](https://www.chartjs.org/)):**
-    *   `- [x]` **Estado de Proyectos:** Gráfico circular mostrando la distribución por estado.
-    *   `- [x]` **Carga por Gerente:** Gráfico circular mostrando el número de proyectos por gerente.
-    *   `- [x]` **Distribución de Prioridad:** Gráfico circular mostrando proyectos por nivel de prioridad.
-    *   `- [x]` **Carga de Trabajo por Empleado:** Gráfico de barras horizontales mostrando las horas totales asignadas a cada empleado en todos los proyectos.
-    *   `- [x]` **Comparativa de Horas:** Gráfico de barras horizontales comparando horas completadas vs. estimadas por proyecto.
-    *   `- [x]` **Evolución Histórica:** Gráfico de línea mostrando las horas completadas acumuladas a lo largo del tiempo.
-    *   `- [x]` **Métricas de Proyectos Críticos:** Gráfico de barras comparando Riesgo, Retraso y Sobre Costo para los proyectos más críticos.
-*   **Lista de Proyectos Críticos:**
-    *   `- [x]` Sección dedicada que resalta proyectos que requieren atención inmediata.
-    *   `- [x]` Muestra métricas clave (Riesgo, Retraso, Variación de Costo, Confianza de Predicción) usando badges para rápida identificación visual.
-*   **Tabla Detallada de Proyectos:**
-    *   `- [x]` Vista tabular completa con todos los datos relevantes por proyecto.
-    *   `- [x]` Formato condicional de colores para Estado, Riesgo, Retraso, Prioridad, Variación de Costo, ROI y Satisfacción para fácil escaneo.
-    *   `- [x]` Diseño responsivo que permite scroll horizontal en pantallas pequeñas.
-*   **Interfaz de Usuario:**
-    *   `- [x]` **Modo Claro / Oscuro:** Botón para cambiar entre temas visuales.
-    *   `- [x]` **Persistencia del Tema:** El tema seleccionado (claro/oscuro) se guarda en `localStorage` y se mantiene entre sesiones y recargas.
-    *   `- [x]` **Diseño Responsivo:** Adaptado para funcionar en diferentes tamaños de pantalla (escritorio, tablet, móvil) usando Bootstrap 5.
-    *   `- [x]` **UI/UX Mejorada:** Diseño limpio, uso de iconos (Bootstrap Icons), espaciado adecuado y jerarquía visual clara.
+🔹 **KPIs Clave** ✅  
+- [x] 📊 Número total de proyectos  
+- [x] ⏳ Horas totales invertidas y completadas  
+- [x] 💰 Presupuesto total vs. Gasto total  
+- [x] 📈 ROI promedio (real o estimado)  
+- [x] ⭐ Satisfacción promedio del cliente  
+- [x] 👨‍💼 Carga de trabajo promedio por empleado  
 
----
+🔹 **Filtros Dinámicos** 🎛️  
+- [x] 🔄 Estado (En Progreso, Completado, Retrasado)  
+- [x] 🏗️ Tipo de Proyecto (Estratégico, Tecnológico, Operativo)  
+- [x] 👨‍💼 Gerente de Proyecto  
+- [x] ⚡ Prioridad (Alta, Media, Baja)  
+- [x] 🚨 Riesgo (Alto, Medio, Bajo)  
+- [x] 📅 Rango de Fechas (Litepicker)  
 
-### 🛠️ Tecnologías Utilizadas
+🔹 **Visualizaciones Interactivas 📊 (Chart.js)**  
+- [x] 📡 Estado de Proyectos (Gráfico circular)  
+- [x] 👨‍💼 Carga por Gerente (Gráfico circular)  
+- [x] 🔥 Distribución de Prioridad (Gráfico circular)  
+- [x] ⏱️ Carga de Trabajo por Empleado (Barras horizontales)  
+- [x] ⚖️ Comparativa de Horas (Barras horizontales)  
+- [x] 🏆 Evolución Histórica (Gráfico de línea)  
+- [x] 🔎 Métricas de Proyectos Críticos (Barras comparativas)  
 
-*   **Frontend:**
-    *   `HTML5`
-    *   `CSS3` (con Variables CSS para Theming)
-    *   `JavaScript (ES6+)` (Manipulación del DOM, Lógica de negocio, Eventos)
-*   **Frameworks / Librerías:**
-    *   [Bootstrap 5](https://getbootstrap.com/): Para layout responsivo, componentes UI y estilos base.
-    *   [Chart.js](https://www.chartjs.org/): Para la creación de gráficos interactivos.
-    *   [Moment.js](https://momentjs.com/): Para manipulación y formateo de fechas.
-    *   [Chart.js Adapter for Moment.js](https://github.com/chartjs/chartjs-adapter-moment): Para usar Moment.js con el eje de tiempo de Chart.js.
-    *   [Chartjs-plugin-datalabels](https://chartjs-plugin-datalabels.netlify.app/): Para mostrar etiquetas dentro de los gráficos.
-    *   [Litepicker](https://litepicker.com/): Para el selector de rango de fechas.
-    *   [Bootstrap Icons](https://icons.getbootstrap.com/): Para los iconos usados en la interfaz.
-*   **Datos:**
-    *   `JSON`: Como fuente de datos estática (`data.json`).
+🔹 **Interfaz de Usuario 🖥️**  
+- [x] 🌞🌙 Modo Claro / Oscuro (Botón de cambio)  
+- [x] 💾 Persistencia del Tema (`localStorage`)  
+- [x] 📱 Diseño Responsivo (Bootstrap 5)  
+- [x] 🎨 UI/UX Mejorada (iconos, espaciado y jerarquía visual)  
 
----
+## 🛠️ Tecnologías Utilizadas  
+🔸 **Frontend:** HTML5, CSS3, JavaScript (ES6+)  
+🔸 **Frameworks y Librerías:** Bootstrap 5, Chart.js, Moment.js, Litepicker  
+🔸 **Datos:** JSON (`data.json`)  
 
-### 🚀 Configuración y Puesta en Marcha
+## 🚀 Configuración y Puesta en Marcha  
+1️⃣ **Crear Archivos:** `index.html`, `style.css`, `script.js`, `data.json`  
+2️⃣ **Copiar Código:** Copia cada sección en su archivo correspondiente  
+3️⃣ **Abrir `index.html`:**  
+   - 🔹 Directamente en tu navegador  
+   - 🔹 **VSCode:** Usar "Live Server"  
+   - 🔹 **Python:** Ejecutar:  
+     ```bash
+     python -m http.server 8000
+     ```  
+     Luego, abrir `http://localhost:8000`  
 
-1.  **Crear Archivos:** Crea los siguientes archivos en un mismo directorio:
-    *   `index.html`
-    *   `style.css`
-    *   `script.js`
-    *   `data.json` (Asegúrate de tener el JSON con los datos de tus proyectos).
-2.  **Copiar Código:** Copia el contenido de las secciones HTML, CSS y JavaScript de este archivo en sus respectivos archivos (`index.html`, `style.css`, `script.js`).
-3.  **Abrir `index.html`:**
-    *   La forma más simple es abrir el archivo `index.html` directamente en tu navegador web.
-    *   **Recomendado:** Para evitar problemas con `fetch` al cargar `data.json` localmente (CORS), usa un servidor local simple.
-        *   **VSCode:** Instala la extensión "Live Server" y haz clic derecho en `index.html` -> "Open with Live Server".
-        *   **Python:** Navega al directorio en tu terminal y ejecuta:
-            ```bash
-            # Python 3
-            python -m http.server 8000
-            ```
-            Luego abre `http://localhost:8000` en tu navegador.
+## ⚙️ Uso  
+🔹 **Vista General:** KPIs superiores  
+🔹 **Explorar Gráficos:** Distribuciones y tendencias  
+🔹 **Filtrar:** Aplicar filtros dinámicos  
+🔹 **Proyectos Críticos:** Identificar problemas  
+🔹 **Detalle en Tabla:** Datos específicos por proyecto  
+🔹 **Cambiar Tema:** Botón de alternancia claro/oscuro  
+
+## 📚 Valor Educativo y Aprendizaje  
+✅ **Visualización de Datos**  
+✅ **Desarrollo Frontend**  
+✅ **Manejo de Eventos y DOM**  
+✅ **Manipulación de JSON y Fetch API**  
+✅ **Diseño Responsivo y UX/UI**  
+
+## 🔮 Futuras Mejoras (TODO)  
+- [ ] 🌐 Integración con Backend/API  
+- [ ] 🔑 Autenticación de Usuarios  
+- [ ] 🧠 Mejoras en Predicciones IA  
+- [ ] ✍️ Edición de Datos en la Interfaz  
+- [ ] 📥 Funcionalidad de Exportación  
+- [ ] 🔔 Sistema de Notificaciones  
 
 ---
-
-### ⚙️ Uso
-
-1.  **Abrir:** Accede a `index.html` a través de tu navegador (preferiblemente con Live Server o similar).
-2.  **Vista General:** Revisa los KPIs superiores para un resumen rápido.
-3.  **Explorar Gráficos:** Analiza las visualizaciones para entender distribuciones y tendencias.
-4.  **Filtrar:** Usa los controles de filtro para segmentar los datos. Los gráficos y la tabla se actualizarán.
-5.  **Proyectos Críticos:** Presta atención a la sección dedicada para identificar problemas potenciales.
-6.  **Detalle en Tabla:** Consulta la tabla inferior para datos específicos de proyectos.
-7.  **Cambiar Tema:** Usa el botón de tema para alternar entre modo claro y oscuro.
-
----
-
-### 📚 Valor Educativo y Aprendizaje
-
-Este proyecto es ideal para aprender:
-
-*   Visualización de Datos (Chart.js)
-*   Desarrollo Frontend (HTML, CSS, JS)
-*   Manipulación del DOM
-*   Manejo de Eventos JS
-*   Trabajo con Datos (JSON, Fetch API)
-*   Integración de Librerías JS
-*   Diseño Responsivo (Bootstrap)
-*   CSS Avanzado (Variables, Theming)
-*   Almacenamiento Local (`localStorage`)
-*   Principios de UX/UI
-
----
-
-### 🔮 Futuras Mejoras (TODO)
-
-*   [ ] Integración con Backend/API real.
-*   [ ] Autenticación de Usuarios.
-*   [ ] Mejoras en Predicciones IA.
-*   [ ] Edición de Datos en la Interfaz.
-*   [ ] Funcionalidad de Exportación.
-*   [ ] Sistema de Notificaciones.
-*   [ ] Más personalización de gráficos.
-*   [ ] Implementación de Pruebas.
-
----
-
 ## 📄 Código Fuente
 
 ### `index.html`

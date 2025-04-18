@@ -68,13 +68,7 @@ En entornos empresariales complejos, gestionar múltiples proyectos simultáneam
 1️⃣ **Crear Archivos:** `index.html`, `style.css`, `script.js`, `data.json`  
 2️⃣ **Copiar Código:** Copia cada sección en su archivo correspondiente  
 3️⃣ **Abrir `index.html`:**  
-   - 🔹 Directamente en tu navegador  
-   - 🔹 **VSCode:** Usar "Live Server"  
-   - 🔹 **Python:** Ejecutar:  
-     ```bash
-     python -m http.server 8000
-     ```  
-     Luego, abrir `http://localhost:8000`  
+
 
 ## ⚙️ Uso  
 🔹 **Vista General:** KPIs superiores  

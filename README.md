@@ -4,11 +4,11 @@
 
 Si eres desarrollador, estudiante o profesional, este proyecto es una invitación abierta a explorar, replicar y mejorar. ¡Sumérgete, personalízalo según tus necesidades y contribuye a hacerlo aún mejor! Vamos a construir algo increíble juntos. 💡
 
-!()[Screenshot_349.png]
+![](Screenshot_349.png)
 
-!()[Screenshot_350.png]
+![](Screenshot_350.png)
 
-!()[Screenshot_351.png]
+![](Screenshot_351.png)
 
 ## 🌟 ¿Por qué este proyecto?
 

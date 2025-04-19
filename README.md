@@ -81,7 +81,7 @@ Sigue estos pasos para configurar y ejecutar el dashboard localmente:
 
 1. **Clona el repositorio**:
    ```bash
-   git clone https://github.com/tu-repositorio/portfolio-dashboard.git
+ git clone  https://github.com/JUANCITOPENA/PORTAFOLIO-DE-ADMINISTRACION-DE-PROYECTS..git
    cd portfolio-dashboard
    ```
 

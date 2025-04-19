@@ -6,7 +6,7 @@ Si eres desarrollador, estudiante o profesional, este proyecto es una invitació
 
 ## 🌟 ¿Por qué este proyecto?
 
-Este dashboard fue creado para satisfacer la necesidad de una herramienta centralizada y visualmente atractiva para monitorear portafolios de proyectos. Rastrea 20 proyectos, 18,000 horas invertidas y métricas clave (KPIs) como eficiencia, retrasos y cumplimiento de cronogramas. Con funciones como filtros dinámicos, mapas de calor de riesgos y tendencias históricas, es una solución práctica para desafíos reales de gestión de proyectos.
+Este dashboard fue creado para satisfacer la necesidad de una herramienta centralizada y visualmente atractiva para monitorear portafolios de proyectos. Rastrea X proyectos, Y horas invertidas y métricas clave (KPIs) como eficiencia, retrasos y cumplimiento de cronogramas. Con funciones como filtros dinámicos, mapas de calor de riesgos y tendencias históricas, es una solución práctica para desafíos reales de gestión de proyectos.
 
 El proyecto es amigable para principiantes, pero lo suficientemente robusto para uso profesional, lo que lo hace ideal para aprendizaje, prototipado o implementación en entornos de producción. 🛠️
 

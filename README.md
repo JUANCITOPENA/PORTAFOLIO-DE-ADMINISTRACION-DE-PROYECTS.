@@ -14,15 +14,15 @@ El proyecto es amigable para principiantes, pero lo suficientemente robusto para
 
 El dashboard utiliza tecnologías web modernas para garantizar rendimiento, responsividad y una excelente experiencia de usuario:
 
-- **HTML5**: Estructura el diseño y contenido del dashboard.
-- **CSS3**: Potencia el tema en modo oscuro, animaciones y diseño responsivo.
+- **HTML5**: Estructura el diseño y contenido del dashboard en `index.html`.
+- **CSS3**: Potencia el tema en modo oscuro, animaciones y diseño responsivo, definidos en `style.css`.
 - **Bootstrap 5.3**: Proporciona un sistema de cuadrícula responsivo y componentes preestilizados para un desarrollo rápido. 🖼️
-- **JavaScript (ES6)**: Impulsa la interactividad, incluyendo filtros dinámicos, ordenamiento de tablas y actualizaciones de gráficos.
+- **JavaScript (ES6)**: Impulsa la interactividad, incluyendo filtros dinámicos, ordenamiento de tablas y actualizaciones de gráficos, implementados en `script.js`.
 - **Chart.js 4.3**: Renderiza gráficos interactivos (torta, barras, líneas) para visualización de datos. 📈
 - **FontAwesome 6.4**: Agrega íconos escalables (e.g., 📅, ⚠️) para mejorar la experiencia de usuario.
-- **JSON**: Almacena datos del portafolio en un formato estructurado y fácil de editar.
+- **JSON**: Almacena datos del portafolio en `data.json`, en un formato estructurado y fácil de editar.
 
-Estas tecnologías fueron seleccionadas por su accesibilidad, soporte comunitario y capacidad para crear una aplicación de nivel profesional.
+Estas tecnologías fueron seleccionadas por su accesibilidad, soporte comunitario y capacidad para crear una aplicación de nivel profesional sin dependencias backend.
 
 ## ✨ Características
 
@@ -86,32 +86,40 @@ Sigue estos pasos para configurar y ejecutar el dashboard localmente:
    ```
 
 2. **Estructura de archivos**:
-   - `portfolio_data.json`: Archivo JSON con los datos del portafolio.
-   - `index.html`: Archivo principal del dashboard con HTML, CSS y JavaScript.
+   - `data.json`: Archivo JSON con los datos del portafolio.
+   - `index.html`: Archivo principal del dashboard con la estructura HTML.
+   - `style.css`: Estilos CSS para el diseño y la responsividad.
+   - `script.js`: Lógica JavaScript para la interactividad y visualizaciones.
 
 3. **Agrega el código**:
-   Copia el código de `portfolio_data.json` y `index.html` en sus respectivos archivos (ver marcadores abajo).
+   Copia el código de `data.json`, `index.html`, `style.css` y `script.js` en sus respectivos archivos (ver marcadores abajo).
 
 4. **Sirve el proyecto**:
-   Usa un servidor local (e.g., Live Server de VS Code o el servidor HTTP de Python):
-   ```bash
-   python -m http.server 8000
-   ```
-   Abre `http://localhost:8000` en tu navegador.
+   Usa un servidor local, como la extensión Live Server de VS Code o cualquier servidor web estático:
+   - **Con Live Server**: Abre el proyecto en VS Code, haz clic derecho en `index.html` y selecciona "Open with Live Server".
+   - **Con un navegador**: Si no tienes un servidor, puedes abrir `index.html` directamente en un navegador, pero algunas funciones (como la carga de `data.json`) podrían no funcionar debido a restricciones de CORS.
+
+   Para una experiencia completa, recomendamos usar un servidor local.
 
 5. **Personaliza**:
-   - Actualiza `portfolio_data.json` con tus datos de proyectos.
-   - Modifica los estilos o scripts de `index.html` para agregar funciones.
+   - Actualiza `data.json` con tus datos de proyectos.
+   - Modifica `style.css` o `script.js` para ajustar estilos o agregar funciones.
 
-No se requieren dependencias adicionales, ya que todas las bibliotecas se cargan mediante CDNs. 🎉
+No se requieren dependencias adicionales, ya que todas las bibliotecas (Bootstrap, Chart.js, FontAwesome) se cargan mediante CDNs. 🎉
 
 ## 📂 Archivos de código
 
-### portfolio_data.json
-<!-- CÓDIGO PARA portfolio_data.json -->
+### data.json
+<!-- CÓDIGO PARA data.json -->
 
 ### index.html
 <!-- CÓDIGO PARA index.html -->
+
+### style.css
+<!-- CÓDIGO PARA style.css -->
+
+### script.js
+<!-- CÓDIGO PARA script.js -->
 
 ## 🔮 Mejoras futuras
 

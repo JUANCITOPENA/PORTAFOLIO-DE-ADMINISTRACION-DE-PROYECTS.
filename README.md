@@ -4,6 +4,13 @@
 
 Si eres un desarrollador que busca un proyecto práctico, un estudiante que desea aprender sobre tecnologías web modernas, o un profesional que necesita una herramienta de visualización personalizable, este proyecto es una invitación abierta a explorar, replicar y mejorar. ¡Sumérgete, adáptalo a tus necesidades y contribuye a hacerlo aún mejor! 💡
 
+![](Screenshot_352.png)
+
+![](Screenshot_353.png)
+
+![](Screenshot_354.png)
+
+
 ## 📁 Estructura del Proyecto
 
 ```
@@ -26,7 +33,9 @@ Si eres un desarrollador que busca un proyecto práctico, un estudiante que dese
 
 ## 🌟 ¿Por qué este proyecto?
 
-Este dashboard nació de la necesidad de contar con una herramienta centralizada, visualmente atractiva e intuitiva para el monitoreo efectivo de portafolios de proyectos. Permite:
+Este dashboard fue creado para satisfacer la necesidad de una herramienta centralizada y visualmente atractiva para monitorear portafolios de proyectos. Rastrea X proyectos, Y horas invertidas y métricas clave (KPIs) como eficiencia, retrasos y cumplimiento de cronogramas. Con funciones como filtros dinámicos, mapas de calor de riesgos y tendencias históricas, es una solución práctica para desafíos reales de gestión de proyectos.
+
+El proyecto es amigable para principiantes, pero lo suficientemente robusto para uso profesional, lo que lo hace ideal para aprendizaje, prototipado o implementación en entornos de producción. 🛠️
 
 - 📈 **Rastrear múltiples proyectos** simultáneamente
 - ⏰ **Visualizar las horas invertidas** por proyecto

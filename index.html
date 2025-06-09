@@ -10,102 +10,28 @@
 </head>
 <body class="body-padding">
 
-  <div class="container-fluid">
+  <div class="dashboard-wrapper"> <!-- Needed for sticky elements -->
     <!-- Header -->
-    <header class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom">
-      <h1 class="h2 dashboard-title"><i class="bi bi-briefcase-fill me-2"></i>Portfolio de Proyectos Dashboard</h1>
-       <!-- La Imagen es el segundo elemento Flex -->
-       <img src="https://avatars.githubusercontent.com/u/38921558?v=4" alt="Avatar" class="navbar-avatar"> 
-       
-      <button id="theme-toggle" class="btn btn-outline-secondary btn-sm theme-toggle-button">
-        <i class="bi bi-moon-stars-fill icon-moon"></i>
-        <i class="bi bi-sun-fill icon-sun d-none"></i>
-        <span class="theme-text ms-1">Dark Mode</span>
-      </button>
-    </header>
-
-    <!-- KPIs Section (2 Rows of 4) -->
-    <section class="kpi-section mb-4">
-      <div class="row g-3">
-        <!-- Row 1 -->
-        <div class="col-6 col-md-3">
-          <div class="card kpi-card h-100">
-            <div class="card-body d-flex flex-column justify-content-center align-items-center">
-              <i class="bi bi-stack kpi-icon text-primary mb-2"></i>
-              <h6 class="kpi-title text-muted">Proyectos Totales</h6>
-              <p id="kpi-total-projects" class="kpi-value">0</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="card kpi-card h-100">
-            <div class="card-body d-flex flex-column justify-content-center align-items-center">
-              <i class="bi bi-clock-history kpi-icon text-info mb-2"></i>
-              <h6 class="kpi-title text-muted">Horas Invertidas</h6>
-              <p id="kpi-hours-invested" class="kpi-value">0</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="card kpi-card h-100">
-            <div class="card-body d-flex flex-column justify-content-center align-items-center">
-              <i class="bi bi-check2-circle kpi-icon text-success mb-2"></i>
-              <h6 class="kpi-title text-muted">Horas Completadas</h6>
-              <p id="kpi-hours-completed" class="kpi-value">0</p>
-            </div>
-          </div>
-        </div>
-         <div class="col-6 col-md-3">
-           <div class="card kpi-card h-100">
-             <div class="card-body d-flex flex-column justify-content-center align-items-center">
-              <i class="bi bi-piggy-bank kpi-icon text-warning mb-2"></i>
-              <h6 class="kpi-title text-muted">Presupuesto Total</h6>
-              <p id="kpi-total-budget" class="kpi-value">$0</p>
-            </div>
-          </div>
-        </div>
-        <!-- Row 2 -->
-        <div class="col-6 col-md-3">
-          <div class="card kpi-card h-100">
-            <div class="card-body d-flex flex-column justify-content-center align-items-center">
-              <i class="bi bi-credit-card kpi-icon text-danger mb-2"></i>
-              <h6 class="kpi-title text-muted">Gasto Total</h6>
-              <p id="kpi-total-spent" class="kpi-value">$0</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 col-md-3">
-            <div class="card kpi-card h-100">
-                <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                    <i class="bi bi-graph-up-arrow kpi-icon text-success mb-2"></i>
-                    <h6 class="kpi-title text-muted">ROI Promedio</h6>
-                    <p id="kpi-average-roi" class="kpi-value">N/A</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="card kpi-card h-100">
-            <div class="card-body d-flex flex-column justify-content-center align-items-center">
-              <i class="bi bi-emoji-smile kpi-icon text-info mb-2"></i>
-              <h6 class="kpi-title text-muted">Satisfacción Cliente</h6>
-              <p id="kpi-average-customer-satisfaction" class="kpi-value">N/A</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="card kpi-card h-100">
-            <div class="card-body d-flex flex-column justify-content-center align-items-center">
-              <i class="bi bi-person-gear kpi-icon text-secondary mb-2"></i>
-              <h6 class="kpi-title text-muted">Carga Promedio Empleado</h6>
-              <p id="kpi-average-employee-workload" class="kpi-value">0 hrs</p>
-            </div>
-          </div>
-        </div>
+    <header class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom sticky-header">
+      <h1 class="h2 dashboard-title flex-grow-1"><i class="bi bi-briefcase-fill me-2"></i>Portfolio de Proyectos Dashboard</h1>
+        <div class="d-flex align-items-center ms-3">
+           <img src="https://avatars.githubusercontent.com/u/38921558?v=4" alt="Avatar"
+                class="navbar-avatar me-3"
+                id="avatarImage"
+                data-bs-toggle="modal"
+                data-bs-target="#profileModal"
+                style="cursor: pointer;"
+                title="Ver Perfil"> <!-- Añadido title para accesibilidad y feedback -->
+          <button id="theme-toggle" class="btn btn-outline-secondary btn-sm theme-toggle-button">
+            <i class="bi bi-moon-stars-fill icon-moon"></i>
+            <i class="bi bi-sun-fill icon-sun d-none"></i>
+            <span class="theme-text ms-1">Dark Mode</span>
+          </button>
       </div>
-    </section>
-
+    </header>
+  <div class="section-divider"></div>
     <!-- Filters Section -->
-    <section class="filters-section card mb-4">
+    <section class="filters-section card mb-4 sticky-filters">
       <div class="card-body">
         <div class="row g-3 align-items-end">
           <div class="col-md-6 col-lg-2">
@@ -149,170 +75,209 @@
       </div>
     </section>
 
-    <!-- Pie Charts Section -->
-    <section class="pie-charts-section mb-4">
-      <div class="row g-3">
-        <div class="col-md-4">
-          <div class="card chart-card h-100">
-            <div class="card-header"><i class="bi bi-pie-chart-fill me-2"></i>Estado de Proyectos</div>
-            <div class="card-body">
-              <div class="chart-container chart-container-pie">
-                <canvas id="projectStatusChart"></canvas>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card chart-card h-100">
-            <div class="card-header"><i class="bi bi-person-lines-fill me-2"></i>Carga por Gerente</div>
-            <div class="card-body">
-              <div class="chart-container chart-container-pie">
-                <canvas id="pmLoadChart"></canvas>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card chart-card h-100">
-            <div class="card-header"><i class="bi bi-bar-chart-steps me-2"></i>Prioridad de Proyectos</div>
-            <div class="card-body">
-              <div class="chart-container chart-container-pie">
-                <canvas id="priorityChart"></canvas>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Employee Workload Section -->
-    <section class="employee-workload-section mb-4">
-        <div class="row">
-            <div class="col-12">
-                <div class="card chart-card h-100">
-                    <div class="card-header"><i class="bi bi-people-fill me-2"></i>Horas Asignadas por Empleado</div>
-                    <div class="card-body">
-                   
-                        <div class="chart-container" style="height: 450px;">
-                            <canvas id="employeeWorkloadChart"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Hours Charts Section -->
-    <section class="hours-charts-section mb-4">
-      <div class="row g-3">
-        <div class="col-lg-6">
-          <div class="card chart-card h-100">
-            <div class="card-header"><i class="bi bi-bar-chart-line-fill me-2"></i>Horas por Proyecto (Completadas vs Estimadas)</div>
-            <div class="card-body">
-              {/* Increased height */}
-              <div class="chart-container" style="height: 400px;">
-                <canvas id="hoursCompletedChart"></canvas>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="card chart-card h-100">
-            <div class="card-header"><i class="bi bi-graph-up me-2"></i>Evolución Histórica de Horas Completadas</div>
-            <div class="card-body">
-               {/* Increased height */}
-              <div class="chart-container" style="height: 400px;">
-                <canvas id="historicalHoursChart"></canvas>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Critical Projects Section -->
-    <section class="critical-projects-section mb-4">
-       <div class="row g-3">
-            <div class="col-lg-7">
-                <div class="card h-100">
-                    <div class="card-header"><i class="bi bi-exclamation-triangle-fill me-2 text-danger"></i>Proyectos Críticos (Lista)</div>
-                    <div class="card-body">
-                        <div id="critical-projects-list" class="list-group critical-list-container">
-                           
-                            <p class="text-muted text-center my-auto">Cargando proyectos críticos...</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-5">
-                <div class="card h-100">
-                     <div class="card-header"><i class="bi bi-clipboard-data-fill me-2"></i>Métricas Clave de Proyectos Críticos</div>
-                     <div class="card-body">
-                  
-                        <div class="chart-container" style="height: 350px;">
-                             <canvas id="criticalProjectsChart"></canvas>
-                         </div>
-                     </div>
-                 </div>
-            </div>
-        </div>
-    </section>
+        <div class="section-divider"></div>
 
 
-    <!-- Projects Table Section -->
-    <section class="projects-table-section">
-      <div class="row">
-        <div class="col-12">
-          <div class="card">
-            <div class="card-header"><i class="bi bi-table me-2"></i>Lista Detallada de Proyectos</div>
-            <div class="card-body">
-              <div class="table-responsive">
-                <table class="table table-striped table-hover table-sm project-table"> 
-                  <thead class="table-light"> 
-                    <tr>
-                      <th>Nombre</th>
-                      <th>Gerente</th>
-                      <th>Tipo</th>
-                      <th>Estado</th>
-                      <th>Prioridad</th>
-                      <th><i class="bi bi-calendar-check"></i> Inicio</th>
-                      <th><i class="bi bi-calendar-x"></i> Fin Plan.</th>
-                      <th><i class="bi bi-calendar-event"></i> Fin Real</th>
-                      <th><i class="bi bi-hourglass-split"></i> Hrs Est.</th>
-                      <th><i class="bi bi-hourglass-bottom"></i> Hrs Comp.</th>
-                      <th><i class="bi bi-percent"></i> Avance</th>
-                      <th><i class="bi bi-alarm"></i> Retraso</th>
-                      <th><i class="bi bi-shield-exclamation"></i> Riesgo</th>
-                      <th><i class="bi bi-currency-dollar"></i> Var. Costo</th>
-                      <th><i class="bi bi-graph-up-arrow"></i> ROI Est.</th>
-                      <th><i class="bi bi-bullseye"></i> Fin Pred. (IA)</th>
-                      <th><i class="bi bi-star-fill"></i> Satisf.</th>
-                    </tr>
-                  </thead>
-                  <tbody id="projects-table-body">
+
+    <div class="content-area"> <!-- Main scrollable content area -->
+        <!-- KPIs Section -->
+        <section class="kpi-section mb-4">
+          <div class="row g-3">
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6"><div class="card kpi-card h-100"><div class="card-body d-flex flex-column justify-content-center align-items-center"><i class="bi bi-stack kpi-icon text-primary mb-2"></i><h6 class="kpi-title text-muted">Proyectos Totales</h6><p id="kpi-total-projects" class="kpi-value">0</p></div></div></div>
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6"><div class="card kpi-card h-100"><div class="card-body d-flex flex-column justify-content-center align-items-center"><i class="bi bi-clock-history kpi-icon text-info mb-2"></i><h6 class="kpi-title text-muted">Horas Estimadas</h6><p id="kpi-hours-invested" class="kpi-value">0</p></div></div></div>
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6"><div class="card kpi-card h-100"><div class="card-body d-flex flex-column justify-content-center align-items-center"><i class="bi bi-check2-circle kpi-icon text-success mb-2"></i><h6 class="kpi-title text-muted">Horas Completadas</h6><p id="kpi-hours-completed" class="kpi-value">0</p></div></div></div>
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6"><div class="card kpi-card h-100"><div class="card-body d-flex flex-column justify-content-center align-items-center"><i class="bi bi-piggy-bank kpi-icon text-warning mb-2"></i><h6 class="kpi-title text-muted">Presupuesto Total</h6><p id="kpi-total-budget" class="kpi-value">$0</p></div></div></div>
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6"><div class="card kpi-card h-100"><div class="card-body d-flex flex-column justify-content-center align-items-center"><i class="bi bi-credit-card kpi-icon text-danger mb-2"></i><h6 class="kpi-title text-muted">Gasto Total</h6><p id="kpi-total-spent" class="kpi-value">$0</p></div></div></div>
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6"><div class="card kpi-card h-100"><div class="card-body d-flex flex-column justify-content-center align-items-center"><i class="bi bi-graph-up-arrow kpi-icon text-success mb-2"></i><h6 class="kpi-title text-muted">ROI Promedio (Port.)</h6><p id="kpi-average-roi" class="kpi-value">N/A</p></div></div></div>
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6"><div class="card kpi-card h-100"><div class="card-body d-flex flex-column justify-content-center align-items-center"><i class="bi bi-emoji-smile kpi-icon text-info mb-2"></i><h6 class="kpi-title text-muted">Satisfacción Cliente</h6><p id="kpi-average-customer-satisfaction" class="kpi-value">N/A</p></div></div></div>
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6"><div class="card kpi-card h-100"><div class="card-body d-flex flex-column justify-content-center align-items-center"><i class="bi bi-person-gear kpi-icon text-secondary mb-2"></i><h6 class="kpi-title text-muted">Carga Prom. Empleado</h6><p id="kpi-average-employee-workload" class="kpi-value">0 hrs</p></div></div></div>
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6"><div class="card kpi-card h-100"><div class="card-body d-flex flex-column justify-content-center align-items-center"><i class="bi bi-calendar2-check kpi-icon text-primary mb-2"></i><h6 class="kpi-title text-muted">Comp. a Tiempo</h6><p id="kpi-on-time-completion-rate" class="kpi-value">N/A</p></div></div></div>
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6"><div class="card kpi-card h-100"><div class="card-body d-flex flex-column justify-content-center align-items-center"><i class="bi bi-cash-stack kpi-icon text-success mb-2"></i><h6 class="kpi-title text-muted">Adh. Presupuesto</h6><p id="kpi-budget-adherence-rate" class="kpi-value">N/A</p></div></div></div>
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6"><div class="card kpi-card h-100"><div class="card-body d-flex flex-column justify-content-center align-items-center"><i class="bi bi-bullseye kpi-icon text-teal mb-2"></i><h6 class="kpi-title text-muted">ROI Port. (Logrado)</h6><p id="kpi-portfolio-roi-achieved" class="kpi-value">N/A</p></div></div></div>
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6"><div class="card kpi-card h-100"><div class="card-body d-flex flex-column justify-content-center align-items-center"><i class="bi bi-cone-striped kpi-icon text-danger mb-2"></i><h6 class="kpi-title text-muted">Riesgo Activos (Prom)</h6><p id="kpi-active-projects-risk-exposure" class="kpi-value">N/A</p></div></div></div>
+          </div>
+        </section>
+
+        
+       <div class="section-divider"></div>
+
+        <!-- Executive Summary Section -->
+        <section class="executive-summary-section mb-4">
+            <div class="card"><div class="card-header"><i class="bi bi-file-earmark-text-fill me-2"></i>Resumen Ejecutivo del Portfolio</div><div class="card-body" id="executive-summary-content"><p class="text-muted">Generando resumen...</p></div></div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Pie Charts Section -->
+        <section class="pie-charts-section mb-4">
+          <div class="row g-3">
+            <div class="col-md-4"><div class="card chart-card h-100"><div class="card-header"><i class="bi bi-pie-chart-fill me-2"></i>Estado de Proyectos</div><div class="card-body"><div class="chart-container chart-container-pie"><canvas id="projectStatusChart"></canvas></div></div></div></div>
+            <div class="col-md-4"><div class="card chart-card h-100"><div class="card-header"><i class="bi bi-person-lines-fill me-2"></i>Carga por Gerente</div><div class="card-body"><div class="chart-container chart-container-pie"><canvas id="pmLoadChart"></canvas></div></div></div></div>
+            <div class="col-md-4"><div class="card chart-card h-100"><div class="card-header"><i class="bi bi-bar-chart-steps me-2"></i>Prioridad de Proyectos</div><div class="card-body"><div class="chart-container chart-container-pie"><canvas id="priorityChart"></canvas></div></div></div></div>
+          </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Financial Performance Section -->
+        <section class="financial-performance-section mb-4">
+          <div class="row g-3">
+            <div class="col-lg-7"><div class="card chart-card h-100"><div class="card-header"><i class="bi bi-wallet2 me-2"></i>Presupuesto vs Gasto por Proyecto (Top 10)</div><div class="card-body"><div class="chart-container" style="height: 420px;"><canvas id="budgetActualChart"></canvas></div></div></div></div>
+            <div class="col-lg-5"><div class="card chart-card h-100"><div class="card-header"><i class="bi bi-bullseye me-2"></i>Desempeño Financiero (ROI vs Var. Costo)</div><div class="card-body"><div class="chart-container" style="height: 420px;"><canvas id="financialScatterChart"></canvas></div></div></div></div>
+          </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Risk and Completion Trends Section -->
+        <section class="risk-completion-trends-section mb-4">
+          <div class="row g-3">
+            <div class="col-md-6"><div class="card chart-card h-100"><div class="card-header"><i class="bi bi-shield-shaded me-2"></i>Distribución de Riesgo de Proyectos</div><div class="card-body"><div class="chart-container" style="height: 380px;"><canvas id="riskDistributionChart"></canvas></div></div></div></div>
+            <div class="col-md-6"><div class="card chart-card h-100"><div class="card-header"><i class="bi bi-calendar2-event-fill me-2"></i>Tendencia de Proyectos Completados</div><div class="card-body"><div class="chart-container" style="height: 380px;"><canvas id="completionTrendChart"></canvas></div></div></div></div>
+          </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Employee Workload Section -->
+        <section class="employee-workload-section mb-4">
+            <div class="row"><div class="col-12"><div class="card chart-card h-100"><div class="card-header"><i class="bi bi-people-fill me-2"></i>Horas Asignadas por Empleado</div><div class="card-body"><div class="chart-container" style="height: 450px;"><canvas id="employeeWorkloadChart"></canvas></div></div></div></div></div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Hours Charts Section -->
+        <section class="hours-charts-section mb-4">
+          <div class="row g-3">
+            <div class="col-lg-6"><div class="card chart-card h-100"><div class="card-header"><i class="bi bi-bar-chart-line-fill me-2"></i>Horas por Proyecto (Completadas vs Estimadas)</div><div class="card-body"><div class="chart-container" style="height: 400px;"><canvas id="hoursCompletedChart"></canvas></div></div></div></div>
+            <div class="col-lg-6"><div class="card chart-card h-100"><div class="card-header"><i class="bi bi-graph-up me-2"></i>Evolución Histórica de Horas Completadas</div><div class="card-body"><div class="chart-container" style="height: 400px;"><canvas id="historicalHoursChart"></canvas></div></div></div></div>
+          </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Critical Projects Section -->
+        <section class="critical-projects-section mb-4">
+           <div class="row g-3">
+                <div class="col-lg-7"><div class="card h-100"><div class="card-header"><i class="bi bi-exclamation-triangle-fill me-2 text-danger"></i>Proyectos Críticos (Lista)</div><div class="card-body"><div id="critical-projects-list" class="list-group critical-list-container"><p class="text-muted text-center my-auto">Cargando proyectos críticos...</p></div></div></div></div>
+                <div class="col-lg-5"><div class="card h-100"><div class="card-header"><i class="bi bi-clipboard-data-fill me-2"></i>Métricas Clave de Proyectos Críticos</div><div class="card-body"><div class="chart-container" style="height: 375px;"><canvas id="criticalProjectsChart"></canvas></div></div></div></div>
+            </div>
+        </section>
+
+     
+
+        <div class="section-divider"></div>
+
+        <!-- Projects Table Section -->
+        <section class="projects-table-section mb-5">
+          <div class="row"><div class="col-12"><div class="card"><div class="card-header"><i class="bi bi-table me-2"></i>Lista Detallada de Proyectos</div><div class="card-body"><div class="table-responsive"><table class="table table-striped table-hover table-sm project-table"><thead class="table-light"><tr><th>Nombre</th><th>Gerente</th><th>Tipo</th><th>Estado</th><th>Prioridad</th><th><i class="bi bi-calendar-check"></i> Inicio</th><th><i class="bi bi-calendar-x"></i> Fin Plan.</th><th><i class="bi bi-calendar-event"></i> Fin Real</th><th><i class="bi bi-hourglass-split"></i> Hrs Est.</th><th><i class="bi bi-hourglass-bottom"></i> Hrs Comp.</th><th><i class="bi bi-percent"></i> Avance</th><th><i class="bi bi-alarm"></i> Retraso</th><th><i class="bi bi-shield-exclamation"></i> Riesgo</th><th><i class="bi bi-currency-dollar"></i> Var. Costo</th><th><i class="bi bi-graph-up-arrow"></i> ROI Est.</th><th><i class="bi bi-bullseye"></i> Fin Pred. (IA)</th><th><i class="bi bi-star-fill"></i> Satisf.</th></tr></thead><tbody id="projects-table-body"></tbody></table></div></div></div></div></div>
+        </section>
+    </div> <!-- End content-area -->
+
+  </div> <!-- End dashboard-wrapper -->
+
+  <!-- Profile Modal -->
+  <div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="profileModalLabel"><i class="bi bi-person-circle me-2"></i>Mi Perfil Profesional</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row align-items-center mb-4">
+              <div class="col-md-3 text-center">
+                <img src="https://avatars.githubusercontent.com/u/38921558?v=4" alt="Avatar" class="img-fluid rounded-circle mb-3" style="max-width: 150px;">
+              </div>
+              <div class="col-md-9">
+                <h4>JUANCITO PEÑA</h4>
+                    <h5 class="modal-title" id="profileModalLabel"><i class="bi bi-person-circle me-2"></i>Desarrollador Fulll Stack y Analisista de Datos.</h5>
              
-                  </tbody>
-                </table>
+                <p>
+                  <!-- COLOCA TU BIOGRAFÍA RESUMIDA AQUÍ -->
+                  Soy un apasionado desarrollador y analista de datos con mas de 15 años de experiencia transformando datos complejos en insights accionables y soluciones innovadoras. Me especializo en la creación de dashboards interactivos, modelado de datos y la aplicación de técnicas de machine learning para resolver problemas de negocio.
+                </p>
+                <div>
+                  <a href="https://www.linkedin.com/in/juancitope%C3%B1a/" target="_blank" class="btn btn-outline-primary btn-sm me-2" title="LinkedIn"><i class="bi bi-linkedin"></i> LinkedIn</a>
+                  <a href="https://github.com/JUANCITOPENA" target="_blank" class="btn btn-outline-secondary btn-sm me-2" title="GitHub"><i class="bi bi-github"></i> GitHub</a>
+                  <a href="https://www.youtube.com/channel/UCSob-3E5z4IHtMF5B4bN-FA"  target="_blank"  class="btn btn-outline-danger btn-sm" title="YouTube"><i class="bi bi-youtube"></i> Visita mi canal
+</a>
+                </div>
               </div>
             </div>
+
+            <hr class="my-4">
+
+            <h5><i class="bi bi-tools me-2"></i>Servicios que Ofrezco</h5>
+            <div class="row g-3 mt-2">
+                            <div class="col-md-6">
+                <div class="card h-100 service-card">
+                  <div class="card-body">
+                    <h6 class="card-title fw-bold"><i class="bi bi-clipboard-data-fill text-primary me-2"></i>Análisis Integral y Visualización de Datos</h6>
+                    <p class="card-text small">Desde la extracción y transformación de datos (SQL, Power Query, Python) hasta la creación de modelos analíticos (DAX, Medidas) y la generación de informes y dashboards interactivos para la toma de decisiones estratégicas. Incluye optimización con vistas y procedimientos almacenados.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card h-100 service-card">
+                  <div class="card-body">
+                    <h6 class="card-title fw-bold"><i class="bi bi-display-fill text-success me-2"></i>Desarrollo de Dashboards Avanzados (UI/UX)</h6>
+                    <p class="card-text small">Creación de dashboards interactivos y visualizaciones de datos personalizadas utilizando Power BI, Python (Dash/Streamlit), JavaScript (Chart.js, ApexCharts.js, D3.js), enfocados en una UI/UX intuitiva y generación de insights de alto impacto.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card h-100 service-card">
+                  <div class="card-body">
+                    <h6 class="card-title fw-bold"><i class="bi bi-code-slash text-info me-2"></i>Desarrollo Web Full-Stack</h6>
+                    <p class="card-text small">Construcción de aplicaciones web completas, desde el backend con Php, Python/Node.js hasta el frontend con React/Vue/Angular, integrando bases de datos y APIs.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card h-100 service-card">
+                  <div class="card-body">
+                    <h6 class="card-title fw-bold"><i class="bi bi-lightbulb-fill text-warning me-2"></i>Consultoría Tecnológica</h6>
+                    <p class="card-text small">Asesoramiento en la selección de herramientas, arquitecturas de datos y estrategias tecnológicas para optimizar procesos y alcanzar objetivos de negocio.</p>
+                  </div>
+                </div>
+              </div>
+                            <div class="col-md-6">
+                <div class="card h-100 service-card">
+                  <div class="card-body">
+                    <h6 class="card-title fw-bold"><i class="bi bi-database-fill-gear text-info me-2"></i>Diseño y Gestión de Bases de Datos</h6>
+                    <p class="card-text small">Desarrollo de modelos de datos relacionales y NoSQL, optimización de consultas, creación de vistas, procedimientos almacenados y triggers para una gestión eficiente y segura de la información.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="card h-100 service-card">
+                  <div class="card-body">
+                    <h6 class="card-title fw-bold"><i class="bi bi-person-video3 text-purple me-2"></i>Capacitación y Entrenamientos Personalizados</h6>
+                    <p class="card-text small">Ofrezco entrenamientos empresariales a medida y cursos por horas en Power BI (DAX, Power Query), SQL Server, Excel avanzado (Power Pivot, VBA), Python para análisis de datos y desarrollo web básico (HTML, CSS, JavaScript).</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Puedes añadir más tarjetas de servicios aquí -->
+            </div>
+
           </div>
         </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
       </div>
-    </section>
-
-  </div> 
-
-
+    </div>
+  </div>
+  <!-- End Profile Modal -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment@1.0.1/dist/chartjs-adapter-moment.min.js"></script>
-
   <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
-
-
   <script src="script.js"></script>
 </body>
 </html>

@@ -618,7 +618,18 @@ body.dark-mode #profileModal .service-card .card-text {
 
 
 
-
+/* Corrección de color para tablas en modo oscuro */
+body.dark-mode .project-table thead th,
+body.dark-mode .project-activities-table thead th { 
+    background-color: var(--card-header-bg-dark); 
+    color: var(--text-muted-dark); /* Color para encabezados th */
+    border-bottom-color: var(--card-border-dark);
+}
+body.dark-mode .project-table tbody td,
+body.dark-mode .project-activities-table tbody td { 
+    border-top-color: var(--table-border-dark); 
+    color: var(--body-color-dark); /* Color para celdas td */
+}
 
 
 /* --- Project Activities and Gantt Section Styles --- */
@@ -742,7 +753,7 @@ body.dark-mode .gantt-popup-content {
     background-color: var(--card-bg-dark);
     color: var(--body-color-dark);
     border: 1px solid var(--card-border-dark);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 8px rgba(255, 253, 253, 0.3);
 }
 .gantt-popup-content h6 {
     margin-bottom: 5px;

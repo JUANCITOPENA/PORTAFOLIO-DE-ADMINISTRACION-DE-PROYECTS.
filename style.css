@@ -98,7 +98,6 @@ body {
     transition: background-color 0.2s ease-out, color 0.2s ease-out;
     font-size: 14px;
     line-height: 1.5;
-    /* NO overflow:hidden; NO display:flex on body for simplest sticky behavior */
 }
 
 .navbar-avatar {
@@ -108,26 +107,18 @@ body {
     object-fit: cover;
 }
 
-.body-padding { /* This class is on the body in your original HTML */
+.body-padding {
     padding: 1rem 1.5rem;
 }
 
 /* --- STICKY HEADER --- */
-header.border-bottom { /* Target your specific header element */
-    position: -webkit-sticky; /* For Safari */
+header.border-bottom {
+    position: -webkit-sticky; 
     position: sticky;
-    top: 0; /* Stick to the top of the viewport */
-    z-index: 1020; /* Ensure it's above other content but below modals etc. */
-    background-color: var(--body-bg-light); /* Must have a background to hide content scrolling beneath */
-    /* Add a little shadow to indicate it's lifted */
+    top: 0; 
+    z-index: 1020; 
+    background-color: var(--body-bg-light); 
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    /* The existing padding on .body-padding which is on body will handle header's internal spacing */
-    /* If .body-padding is removed from body, header would need its own padding */
-    /* Let's assume .body-padding remains on body and header benefits from it. */
-    /* If header needs its own specific padding WHEN STICKY, it's more complex.
-       For now, relying on body's padding. If body's padding is 0, add to header:
-       padding-left: 1.5rem; padding-right: 1.5rem;
-    */
 }
 
 .dashboard-title {
@@ -160,22 +151,14 @@ header.border-bottom { /* Target your specific header element */
 }
 
 /* --- STICKY FILTERS --- */
-section.filters-section.card { /* Target your specific filters section */
-    position: -webkit-sticky; /* For Safari */
+section.filters-section.card {
+    position: -webkit-sticky;
     position: sticky;
-    /* The 'top' value MUST be the height of the sticky header above it.
-       You need to measure your header's rendered height.
-       Let's assume a common header height of around 70-80px.
-       If your header has padding 1rem (16px) top/bottom + line-height + bottom-padding/margin...
-       This value is CRITICAL and might need adjustment or media queries.
-    */
-    top: 80px; /* <<< ADJUST THIS VALUE to match your header's height */
-    z-index: 1019; /* Below header, above content */
-    background-color: var(--body-bg-light); /* Must have a background */
-    /* The card itself already provides the visual container */
-    /* Add a shadow to the card when it becomes sticky, or always */
+    top: 80px; /* ADJUST THIS VALUE to match your header's height */
+    z-index: 1019;
+    background-color: var(--body-bg-light); 
     box-shadow: 0 3px 5px rgba(0,0,0,0.07);
-    border-top: 1px solid var(--card-border-light); /* Optional: visual separation */
+    border-top: 1px solid var(--card-border-light);
 }
 
 
@@ -183,19 +166,17 @@ section.filters-section.card { /* Target your specific filters section */
 .card {
     border: 1px solid var(--card-border-light);
     border-radius: 8px;
-    /* box-shadow is now handled by sticky-filters or general card hover if not sticky */
-    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); */
     background-color: var(--card-bg-light);
     transition: background-color 0.2s ease-out, border-color 0.2s ease-out, box-shadow 0.15s ease-in-out;
-    overflow: hidden; /* Kept for general card behavior */
+    overflow: hidden; 
 }
 
-.card:not(.filters-section) { /* Apply general card shadow if it's NOT the sticky filter card */
+.card:not(.filters-section) {
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 
-.card:hover:not(.filters-section) { /* Hover only for non-sticky-filter cards */
+.card:hover:not(.filters-section) {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
 }
 
@@ -265,7 +246,7 @@ section.filters-section.card { /* Target your specific filters section */
 }
 
 /* --- Filter Section Styles --- */
-.filters-section .card-body { /* This is inside .sticky-filters .card */
+.filters-section .card-body {
     padding: 0.75rem 1rem;
 }
 
@@ -453,23 +434,20 @@ body.dark-mode { background-color: var(--body-bg-dark); color: var(--body-color-
 
 /* STICKY HEADER & FILTERS DARK MODE */
 body.dark-mode header.border-bottom {
-    background-color: var(--body-bg-dark); /* Match dark body background */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.25); /* Darker shadow for dark mode */
+    background-color: var(--body-bg-dark); 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.25); 
 }
 body.dark-mode section.filters-section.card {
-    background-color: var(--body-bg-dark); /* Match dark body background for the sticky container part */
-    /* The card inside will take its dark mode styles */
+    background-color: var(--body-bg-dark); 
     box-shadow: 0 3px 5px rgba(0,0,0,0.20);
     border-top-color: var(--card-border-dark);
 }
-/* Ensure the card itself within sticky-filters also uses dark mode card styles */
 body.dark-mode section.filters-section.card .card {
-    background-color: var(--card-bg-dark) !important; /* Override if needed */
+    background-color: var(--card-bg-dark) !important; 
     border-color: var(--card-border-dark) !important;
 }
 body.dark-mode section.filters-section.card .card-body {
-    /* If sticky-filters has its own bg, card-body needs to match card-bg-dark */
-     background-color: var(--card-bg-dark); /* Or inherit, if card is styled correctly */
+     background-color: var(--card-bg-dark); 
 }
 
 
@@ -534,27 +512,30 @@ body.dark-mode .litepicker button.button-reset { color: var(--text-muted-dark) !
 /* --- Responsive Adjustments --- */
 @media (max-width: 1199.98px) { .kpi-value { font-size: 1.35rem; } .kpi-icon { font-size: 1.35rem; } .kpi-title { font-size: 0.65rem; } }
 @media (max-width: 991.98px) {
-    section.filters-section.card { top: 73px; /* Adjust if header height changes */ }
+    section.filters-section.card { top: 73px; }
     .chart-container-pie { max-width: 260px; max-height: 260px; } .card-header { font-size: 0.85rem; padding: 0.6rem 1rem; } .project-table td, .project-table th { font-size: 0.8rem; padding: 0.5rem 0.6rem; } .critical-list-container { max-height: 350px; } .kpi-value { font-size: 1.25rem; } .kpi-icon { font-size: 1.25rem; } .dashboard-title { font-size: 1.4rem; }
 }
 @media (max-width: 767.98px) {
-    .body-padding { padding: 0.75rem 1rem; /* Restore body padding for smaller screens if sticky doesn't use it directly */ }
-    header.border-bottom { padding-left: 1rem; padding-right: 1rem; /* Adjust header padding */ }
-    section.filters-section.card { top: 65px; /* Adjust if header height changes */ }
+    .body-padding { padding: 0.75rem 1rem; }
+    header.border-bottom { padding-left: 1rem; padding-right: 1rem; }
+    section.filters-section.card { top: 65px; }
     .chart-container-pie { max-width: 220px; max-height: 220px; }
     .critical-projects-section .col-lg-7, .critical-projects-section .col-lg-5,
     .financial-performance-section .col-lg-7, .financial-performance-section .col-lg-5,
     .risk-completion-trends-section .col-md-6, .hours-charts-section .col-lg-6,
-    .pie-charts-section .col-md-4 { width: 100%; }
+    .pie-charts-section .col-md-4,
+    .project-gantt-section .col-lg-5, .project-gantt-section .col-lg-7 { width: 100%; } /* Added Gantt section columns */
+
     .critical-projects-section .col-lg-5 .card, .financial-performance-section .col-lg-5 .card,
     .risk-completion-trends-section .col-md-6:last-child .card, .hours-charts-section .col-lg-6:last-child .card,
-    .pie-charts-section .col-md-4:not(:first-child) .card { margin-top: 1rem; }
+    .pie-charts-section .col-md-4:not(:first-child) .card,
+    .project-gantt-section .col-lg-7 { margin-top: 1rem; } /* Added Gantt section margin */
     .kpi-value { font-size: 1.2rem; } .kpi-icon { font-size: 1.2rem; } .kpi-title { font-size: 0.62rem; }
 }
 @media (max-width: 575.98px) {
-    .body-padding { padding: 0.75rem; } /* Further adjust body padding */
-    header.border-bottom { padding-left: 0.75rem; padding-right: 0.75rem; /* Adjust header padding */ }
-    section.filters-section.card { top: 60px; /* Adjust if header height changes */ }
+    .body-padding { padding: 0.75rem; } 
+    header.border-bottom { padding-left: 0.75rem; padding-right: 0.75rem; }
+    section.filters-section.card { top: 60px; }
     .filters-section .card-body { padding: 0.5rem 0.75rem; }
     .kpi-card .card-body { padding: 0.7rem 0.5rem; } .kpi-value { font-size: 1.05rem; } .kpi-icon { font-size: 1.1rem; } .kpi-title { font-size: 0.6rem; letter-spacing: 0.3px; } .dashboard-title { font-size: 1.2rem; } .dashboard-title i { font-size: 1.1rem; } .filters-section .col-lg-2 { width: 50%; } .filters-section .col-lg-2:nth-child(n+3) { margin-top: 0.5rem; } .project-table td, .project-table th { font-size: 0.75rem; padding: 0.4rem 0.5rem; } .critical-project .badge { font-size: 0.65rem; padding: 0.2em 0.45em; } .card-header { font-size: 0.8rem; padding: 0.5rem 0.8rem; } .card-body { padding: 0.8rem; } .section-divider { margin: 1.5rem 0; }
 }
@@ -583,7 +564,7 @@ body.dark-mode .modal-footer {
 }
 
 body.dark-mode .btn-close {
-    filter: invert(1) grayscale(100%) brightness(200%); /* Make close button visible in dark mode */
+    filter: invert(1) grayscale(100%) brightness(200%);
 }
 
 .service-card {
@@ -598,7 +579,7 @@ body.dark-mode .btn-close {
 
 body.dark-mode .service-card {
     border-color: var(--card-border-dark);
-    background-color: var(--table-striped-bg-dark); /* Slightly different bg for service cards in dark mode */
+    background-color: var(--table-striped-bg-dark);
 }
 body.dark-mode .service-card:hover {
     box-shadow: 0 4px 12px rgba(0,0,0,0.25);
@@ -607,8 +588,8 @@ body.dark-mode .service-card:hover {
 #profileModal h4 {
     color: var(--body-color-light);
 }
-#profileModal h5 { /* Target the "Servicios que Ofrezco" title */
-    color: var(--card-header-color-light); /* Match general card header color */
+#profileModal h5 { 
+    color: var(--card-header-color-light); 
     margin-top: 1.5rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid var(--card-border-light);
@@ -633,4 +614,176 @@ body.dark-mode #profileModal .service-card .card-title {
 }
 body.dark-mode #profileModal .service-card .card-text {
     color: var(--text-muted-dark);
+}
+
+
+
+
+
+
+/* --- Project Activities and Gantt Section Styles --- */
+/* ... (todos tus estilos existentes, incluyendo los de Gantt) ... */
+
+/* ... (todos tus estilos existentes) ... */
+
+/* --- Project Activities and Gantt Section Styles --- */
+.project-activities-table th,
+.project-activities-table td {
+    font-size: 0.8rem; /* Un poco más pequeño para la tabla de actividades */
+    padding: 0.4rem 0.5rem;
+}
+
+#gantt-chart-container svg { /* Contenedor del SVG de Frappe Gantt */
+    width: 100%;
+    display: block; /* Para evitar espacio extra debajo del SVG */
+    background-color: var(--card-bg-light); /* Fondo claro por defecto */
+}
+
+body.dark-mode #gantt-chart-container svg {
+    background-color: var(--card-bg-dark); /* Fondo oscuro en modo oscuro */
+}
+
+/* Estilos básicos para Frappe Gantt (Modo Claro por defecto) */
+.gantt .grid-header {
+    fill: var(--card-header-bg-light) !important; /* Encabezados de fecha */
+    stroke: var(--card-border-light) !important;
+}
+.gantt .grid-row .grid-background { /* Filas alternas */
+    fill: var(--table-bg-light) !important;
+}
+.gantt .grid-row:nth-of-type(even) .grid-background {
+    fill: var(--table-striped-bg-light) !important;
+}
+.gantt .tick { /* Marcas de tiempo en el eje X */
+    stroke: var(--text-muted-light) !important;
+    stroke-width: 0.8 !important;
+}
+.gantt text { /* Texto general dentro del Gantt (nombres de tareas, fechas) */
+    fill: var(--body-color-light) !important;
+    font-size: 11px !important;
+}
+.gantt .bar-wrapper { /* Barras de tarea */
+    fill: var(--color-primary) !important;
+    stroke: var(--color-primary) !important;
+    cursor: pointer;
+}
+.gantt .bar-progress { /* Progreso dentro de la barra */
+    fill: var(--color-info) !important; /* Un color más oscuro o contrastante que la barra */
+    opacity: 0.7;
+}
+.gantt .bar-label { /* Etiqueta sobre la barra */
+    fill: #fff !important; /* Texto blanco sobre barras oscuras */
+    font-size: 10px !important;
+    font-weight: 500 !important;
+}
+.gantt .handle { /* Agarraderas para redimensionar */
+    fill: var(--color-secondary) !important;
+    stroke: var(--color-secondary) !important;
+    stroke-width: 2 !important;
+    opacity: 0.7 !important;
+    cursor: ew-resize !important;
+}
+.gantt .bar-group:hover .handle {
+    opacity: 1 !important;
+}
+.gantt .arrow { /* Flechas de dependencia */
+    fill: var(--kpi-title-color-light) !important;
+}
+
+
+/* Modo Oscuro para Frappe Gantt */
+body.dark-mode .gantt .grid-header {
+    fill: var(--card-header-bg-dark) !important;
+    stroke: var(--card-border-dark) !important;
+}
+body.dark-mode .gantt .grid-row .grid-background {
+    fill: var(--table-bg-dark) !important;
+}
+body.dark-mode .gantt .grid-row:nth-of-type(even) .grid-background {
+    fill: var(--table-striped-bg-dark) !important;
+}
+body.dark-mode .gantt .tick {
+    stroke: var(--text-muted-dark) !important;
+}
+body.dark-mode .gantt text {
+    fill: var(--body-color-dark) !important;
+}
+body.dark-mode .gantt .bar-wrapper {
+    fill: var(--link-color-dark) !important;
+    stroke: var(--link-color-dark) !important;
+}
+body.dark-mode .gantt .bar-progress {
+    fill: var(--color-teal) !important; /* Un color que contraste bien en modo oscuro */
+    opacity: 0.8;
+}
+body.dark-mode .gantt .bar-label {
+    fill: var(--body-bg-dark) !important; /* Texto que contraste con la barra en modo oscuro */
+}
+body.dark-mode .gantt .handle {
+    fill: var(--color-secondary) !important;
+    stroke: var(--color-secondary) !important;
+}
+body.dark-mode .gantt .arrow {
+    fill: var(--kpi-title-color-dark) !important;
+}
+
+/* Estilo del popup del Gantt */
+.gantt-popup-content {
+    background-color: var(--card-bg-light);
+    color: var(--body-color-light);
+    border: 1px solid var(--card-border-light);
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 10px;
+    font-size: 12px;
+    min-width: 200px;
+}
+body.dark-mode .gantt-popup-content {
+    background-color: var(--card-bg-dark);
+    color: var(--body-color-dark);
+    border: 1px solid var(--card-border-dark);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+.gantt-popup-content h6 {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: inherit !important; 
+}
+.gantt-popup-content p {
+    margin-bottom: 3px;
+    color: inherit !important;
+}
+.gantt-popup-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Formato Condicional para Progreso en Tabla de Actividades */
+.project-activities-table td.text-danger {
+    color: var(--color-danger) !important;
+    font-weight: 500;
+}
+.project-activities-table td.text-warning {
+    color: var(--color-orange) !important; 
+    font-weight: 500;
+}
+.project-activities-table td.text-primary { 
+    color: var(--color-primary) !important;
+}
+.project-activities-table td.text-success {
+    color: var(--color-success) !important;
+    font-weight: bold;
+}
+
+/* Ajustes para el modo oscuro si es necesario para el formato condicional */
+body.dark-mode .project-activities-table td.text-danger {
+    color: var(--summary-text-negative-dark) !important;
+}
+body.dark-mode .project-activities-table td.text-warning {
+    color: var(--summary-text-warning-dark) !important;
+}
+body.dark-mode .project-activities-table td.text-primary {
+     color: var(--link-color-dark) !important; 
+}
+body.dark-mode .project-activities-table td.text-success {
+    color: var(--summary-text-positive-dark) !important;
 }

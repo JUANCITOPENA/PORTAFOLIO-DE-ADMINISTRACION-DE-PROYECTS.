@@ -58,7 +58,15 @@
         "velocity": 225,
         "customer_satisfaction_score": null,
         "customer_feedback": null,
-        "customer_satisfaction_trend": null
+        "customer_satisfaction_trend": null,
+        "activities": [
+            { "id": "ERP001_T1", "name": "Análisis de Requisitos", "start": "2024-03-01", "end": "2024-03-31", "progress": 100, "dependencies": "" },
+            { "id": "ERP001_T2", "name": "Diseño del Sistema", "start": "2024-04-01", "end": "2024-05-15", "progress": 90, "dependencies": "ERP001_T1" },
+            { "id": "ERP001_T3", "name": "Desarrollo Módulo Core", "start": "2024-05-16", "end": "2024-09-30", "progress": 70, "dependencies": "ERP001_T2" },
+            { "id": "ERP001_T4", "name": "Desarrollo Módulos Secundarios", "start": "2024-08-01", "end": "2024-12-15", "progress": 60, "dependencies": "ERP001_T2" },
+            { "id": "ERP001_T5", "name": "Pruebas Integrales", "start": "2024-12-16", "end": "2025-02-28", "progress": 20, "dependencies": "ERP001_T3,ERP001_T4" },
+            { "id": "ERP001_T6", "name": "Despliegue y Capacitación", "start": "2025-03-01", "end": "2025-06-30", "progress": 0, "dependencies": "ERP001_T5" }
+        ]
       },
       {
         "id": "proj002",
@@ -106,7 +114,14 @@
         "velocity": 112.5,
         "customer_satisfaction_score": null,
         "customer_feedback": null,
-        "customer_satisfaction_trend": null
+        "customer_satisfaction_trend": null,
+        "activities": [
+            { "id": "LATAM_T1", "name": "Investigación de Mercado", "start": "2024-01-15", "end": "2024-03-15", "progress": 100, "dependencies": "" },
+            { "id": "LATAM_T2", "name": "Plan de Negocios Regional", "start": "2024-03-01", "end": "2024-04-30", "progress": 80, "dependencies": "LATAM_T1" },
+            { "id": "LATAM_T3", "name": "Establecimiento Legal", "start": "2024-05-01", "end": "2024-07-31", "progress": 60, "dependencies": "LATAM_T2" },
+            { "id": "LATAM_T4", "name": "Contratación Equipo Local", "start": "2024-07-01", "end": "2024-09-30", "progress": 30, "dependencies": "LATAM_T3" },
+            { "id": "LATAM_T5", "name": "Lanzamiento Operaciones", "start": "2024-10-01", "end": "2024-12-15", "progress": 10, "dependencies": "LATAM_T4" }
+        ]
       },
       {
         "id": "proj003",
@@ -152,7 +167,13 @@
         "velocity": null,
         "customer_satisfaction_score": 5,
         "customer_feedback": "Excellent process improvements",
-        "customer_satisfaction_trend": null
+        "customer_satisfaction_trend": null,
+        "activities": [
+            { "id": "OPT003_T1", "name": "Mapeo de Procesos Actuales", "start": "2023-08-01", "end": "2023-08-31", "progress": 100, "dependencies": "" },
+            { "id": "OPT003_T2", "name": "Identificación de Mejoras", "start": "2023-09-01", "end": "2023-09-30", "progress": 100, "dependencies": "OPT003_T1" },
+            { "id": "OPT003_T3", "name": "Implementación de Cambios", "start": "2023-10-01", "end": "2024-01-31", "progress": 100, "dependencies": "OPT003_T2" },
+            { "id": "OPT003_T4", "name": "Monitoreo y Ajustes", "start": "2024-02-01", "end": "2024-02-25", "progress": 100, "dependencies": "OPT003_T3" }
+        ]
       },
       {
         "id": "proj004",
@@ -198,7 +219,14 @@
         "velocity": 300,
         "customer_satisfaction_score": null,
         "customer_feedback": null,
-        "customer_satisfaction_trend": null
+        "customer_satisfaction_trend": null,
+        "activities": [
+            { "id": "PRODX_T1", "name": "Concepto y Prototipo", "start": "2024-05-10", "end": "2024-07-10", "progress": 100, "dependencies": "" },
+            { "id": "PRODX_T2", "name": "Desarrollo Alpha", "start": "2024-07-11", "end": "2024-11-30", "progress": 60, "dependencies": "PRODX_T1" },
+            { "id": "PRODX_T3", "name": "Pruebas Internas Alpha", "start": "2024-12-01", "end": "2025-01-15", "progress": 20, "dependencies": "PRODX_T2" },
+            { "id": "PRODX_T4", "name": "Desarrollo Beta", "start": "2025-01-16", "end": "2025-05-31", "progress": 10, "dependencies": "PRODX_T3" },
+            { "id": "PRODX_T5", "name": "Lanzamiento", "start": "2025-07-01", "end": "2025-09-30", "progress": 0, "dependencies": "PRODX_T4" }
+        ]
       },
       {
         "id": "proj005",
@@ -242,7 +270,13 @@
         "velocity": 175,
         "customer_satisfaction_score": null,
         "customer_feedback": null,
-        "customer_satisfaction_trend": null
+        "customer_satisfaction_trend": null,
+        "activities": [
+            { "id": "ITUPG_T1", "name": "Inventario y Planificación", "start": "2024-07-01", "end": "2024-07-31", "progress": 100, "dependencies": "" },
+            { "id": "ITUPG_T2", "name": "Adquisición de Hardware", "start": "2024-08-01", "end": "2024-09-15", "progress": 90, "dependencies": "ITUPG_T1" },
+            { "id": "ITUPG_T3", "name": "Instalación y Configuración", "start": "2024-09-16", "end": "2024-11-30", "progress": 40, "dependencies": "ITUPG_T2" },
+            { "id": "ITUPG_T4", "name": "Migración de Datos y Pruebas", "start": "2024-12-01", "end": "2025-01-31", "progress": 10, "dependencies": "ITUPG_T3" }
+        ]
       },
       {
         "id": "proj006",
@@ -284,7 +318,8 @@
         "velocity": 100,
         "customer_satisfaction_score": null,
         "customer_feedback": null,
-        "customer_satisfaction_trend": null
+        "customer_satisfaction_trend": null,
+        "activities": []
       },
       {
         "id": "proj007",
@@ -329,7 +364,8 @@
         "velocity": 120,
         "customer_satisfaction_score": null,
         "customer_feedback": null,
-        "customer_satisfaction_trend": null
+        "customer_satisfaction_trend": null,
+        "activities": []
       },
       {
         "id": "proj008",
@@ -375,7 +411,8 @@
         "velocity": 116.67,
         "customer_satisfaction_score": null,
         "customer_feedback": null,
-        "customer_satisfaction_trend": null
+        "customer_satisfaction_trend": null,
+        "activities": []
       },
       {
         "id": "proj009",
@@ -420,7 +457,8 @@
         "velocity": null,
         "customer_satisfaction_score": 4,
         "customer_feedback": "Good team alignment",
-        "customer_satisfaction_trend": null
+        "customer_satisfaction_trend": null,
+        "activities": []
       },
       {
         "id": "proj010",
@@ -462,7 +500,8 @@
         "velocity": 133.33,
         "customer_satisfaction_score": null,
         "customer_feedback": null,
-        "customer_satisfaction_trend": null
+        "customer_satisfaction_trend": null,
+        "activities": []
       },
       {
         "id": "proj011",
@@ -507,7 +546,8 @@
         "velocity": 250,
         "customer_satisfaction_score": null,
         "customer_feedback": null,
-        "customer_satisfaction_trend": "Improving"
+        "customer_satisfaction_trend": "Improving",
+        "activities": []
       },
       {
         "id": "proj012",
@@ -549,7 +589,8 @@
         "velocity": null,
         "customer_satisfaction_score": 5,
         "customer_feedback": "Highly effective campaign",
-        "customer_satisfaction_trend": null
+        "customer_satisfaction_trend": null,
+        "activities": []
       },
       {
         "id": "proj013",
@@ -594,7 +635,8 @@
         "velocity": 80,
         "customer_satisfaction_score": null,
         "customer_feedback": null,
-        "customer_satisfaction_trend": null
+        "customer_satisfaction_trend": null,
+        "activities": []
       },
       {
         "id": "proj014",
@@ -634,7 +676,8 @@
         "velocity": 300,
         "customer_satisfaction_score": null,
         "customer_feedback": null,
-        "customer_satisfaction_trend": null
+        "customer_satisfaction_trend": null,
+        "activities": []
       },
       {
         "id": "proj015",
@@ -680,7 +723,8 @@
         "velocity": 120,
         "customer_satisfaction_score": null,
         "customer_feedback": null,
-        "customer_satisfaction_trend": null
+        "customer_satisfaction_trend": null,
+        "activities": []
       },
       {
         "id": "proj016",
@@ -723,7 +767,8 @@
         "velocity": 400,
         "customer_satisfaction_score": null,
         "customer_feedback": null,
-        "customer_satisfaction_trend": null
+        "customer_satisfaction_trend": null,
+        "activities": []
       },
       {
         "id": "proj017",
@@ -770,7 +815,8 @@
         "velocity": 150,
         "customer_satisfaction_score": null,
         "customer_feedback": null,
-        "customer_satisfaction_trend": "Stable"
+        "customer_satisfaction_trend": "Stable",
+        "activities": []
       },
       {
         "id": "proj018",
@@ -816,7 +862,8 @@
         "velocity": null,
         "customer_satisfaction_score": 4,
         "customer_feedback": "Efficient HR automation",
-        "customer_satisfaction_trend": null
+        "customer_satisfaction_trend": null,
+        "activities": []
       },
       {
         "id": "proj019",
@@ -861,7 +908,8 @@
         "velocity": 160,
         "customer_satisfaction_score": null,
         "customer_feedback": null,
-        "customer_satisfaction_trend": null
+        "customer_satisfaction_trend": null,
+        "activities": []
       },
       {
         "id": "proj020",
@@ -903,7 +951,8 @@
         "velocity": 200,
         "customer_satisfaction_score": null,
         "customer_feedback": null,
-        "customer_satisfaction_trend": null
+        "customer_satisfaction_trend": null,
+        "activities": []
       },
       {
         "id": "proj021",
@@ -945,7 +994,8 @@
         "velocity": 300,
         "customer_satisfaction_score": null,
         "customer_feedback": null,
-        "customer_satisfaction_trend": null
+        "customer_satisfaction_trend": null,
+        "activities": []
       },
       {
         "id": "proj022",
@@ -990,7 +1040,8 @@
         "velocity": 100,
         "customer_satisfaction_score": null,
         "customer_feedback": null,
-        "customer_satisfaction_trend": null
+        "customer_satisfaction_trend": null,
+        "activities": []
       },
       {
         "id": "proj023",
@@ -1036,7 +1087,8 @@
         "velocity": 240,
         "customer_satisfaction_score": null,
         "customer_feedback": null,
-        "customer_satisfaction_trend": "Improving"
+        "customer_satisfaction_trend": "Improving",
+        "activities": []
       },
       {
         "id": "proj024",
@@ -1082,7 +1134,8 @@
         "velocity": null,
         "customer_satisfaction_score": 5,
         "customer_feedback": "Very positive customer response",
-        "customer_satisfaction_trend": null
+        "customer_satisfaction_trend": null,
+        "activities": []
       },
       {
         "id": "proj025",
@@ -1123,7 +1176,8 @@
         "velocity": 300,
         "customer_satisfaction_score": null,
         "customer_feedback": null,
-        "customer_satisfaction_trend": null
+        "customer_satisfaction_trend": null,
+        "activities": []
       }
     ]
   }

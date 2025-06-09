@@ -1,8 +1,6 @@
-
-
 <div align="center">
   <img src="https://avatars.githubusercontent.com/u/38921558?v=4" alt="Logo del Proyecto" width="150" style="border-radius: 50%; border: 3px solid #3498db;"/>
-  <h1># 📊 Dashboard de Portafolio: Una Solución Moderna para Gestión de Proyectos3 ✨</h1>
+  <h1>📊 Dashboard de Portafolio: Una Solución Moderna para Gestión de Proyectos ✨</h1>
   <p>
     <em>Un dashboard interactivo y dinámico para la visualización y análisis avanzado de datos y rendimiento.</em>
   </p>
@@ -10,8 +8,8 @@
     <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
     <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
     <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
-    <img src="https://img.shields.io/badge/ApexCharts-008FFB?style=for-the-badge&logo=apexcharts&logoColor=white" alt="ApexCharts">
-    <img src="https://img.shields.io/badge/FontAwesome-528DD7?style=for-the-badge&logo=fontawesome&logoColor=white" alt="FontAwesome">
+    <img src="https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white" alt="Chart.js">
+    <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap">
   </p>
 </div>
 
@@ -21,12 +19,11 @@
 
 Si eres un desarrollador que busca un proyecto práctico, un estudiante que desea aprender sobre tecnologías web modernas, o un profesional que necesita una herramienta de visualización personalizable, este proyecto es una invitación abierta a explorar, replicar y mejorar. ¡Sumérgete, adáptalo a tus necesidades y contribuye a hacerlo aún mejor! 💡
 
-![](Screenshot_352.png)
+![Dashboard Preview](Screenshot_352.png)
 
-![](Screenshot_353.png)
+![Dashboard Features](Screenshot_353.png)
 
-![](Screenshot_354.png)
-
+![Dashboard Analytics](Screenshot_354.png)
 
 ## 📁 Estructura del Proyecto
 
@@ -50,7 +47,7 @@ Si eres un desarrollador que busca un proyecto práctico, un estudiante que dese
 
 ## 🌟 ¿Por qué este proyecto?
 
-Este dashboard fue creado para satisfacer la necesidad de una herramienta centralizada y visualmente atractiva para monitorear portafolios de proyectos. Rastrea X proyectos, Y horas invertidas y métricas clave (KPIs) como eficiencia, retrasos y cumplimiento de cronogramas. Con funciones como filtros dinámicos, mapas de calor de riesgos y tendencias históricas, es una solución práctica para desafíos reales de gestión de proyectos.
+Este dashboard fue creado para satisfacer la necesidad de una herramienta centralizada y visualmente atractiva para monitorear portafolios de proyectos. Rastrea múltiples proyectos, horas invertidas y métricas clave (KPIs) como eficiencia, retrasos y cumplimiento de cronogramas. Con funciones como filtros dinámicos, mapas de calor de riesgos y tendencias históricas, es una solución práctica para desafíos reales de gestión de proyectos.
 
 El proyecto es amigable para principiantes, pero lo suficientemente robusto para uso profesional, lo que lo hace ideal para aprendizaje, prototipado o implementación en entornos de producción. 🛠️
 
@@ -127,25 +124,21 @@ Asegúrate de tener los siguientes archivos:
 2. Instala la extensión "Live Server"
 3. Clic derecho en `index.html` → "Open with Live Server"
 
-#### 🟡 Opción 2: Python
+#### 🟡 Opción 2: Servidor HTTP Simple
 ```bash
-# Python 3
-python -m http.server 8000
-
-# Python 2
-python -m SimpleHTTPServer 8000
-```
-Luego ve a `http://localhost:8000`
-
-#### 🔵 Opción 3: Node.js
-```bash
-# Instalar globalmente
-npm install -g http-server
-http-server
-
-# O usar npx (sin instalación)
+# Con Node.js
 npx http-server
+
+# Con PHP (si está instalado)
+php -S localhost:8000
+
+# Simplemente abre index.html en tu navegador
+# (Algunas funcionalidades pueden estar limitadas)
 ```
+
+#### 🔵 Opción 3: Extensiones de Navegador
+- **Chrome**: Usa extensiones como "Web Server for Chrome"
+- **Firefox**: Habilita CORS localmente para desarrollo
 
 ### 4️⃣ Personaliza el Dashboard
 - Modifica `data/data.json` con tus proyectos reales

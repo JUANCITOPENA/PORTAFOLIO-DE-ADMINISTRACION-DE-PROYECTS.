@@ -1,4 +1,21 @@
-# 📊 Dashboard de Portafolio: Una Solución Moderna para Gestión de Proyectos
+
+
+<div align="center">
+  <img src="https://avatars.githubusercontent.com/u/38921558?v=4" alt="Logo del Proyecto" width="150" style="border-radius: 50%; border: 3px solid #3498db;"/>
+  <h1># 📊 Dashboard de Portafolio: Una Solución Moderna para Gestión de Proyectos3 ✨</h1>
+  <p>
+    <em>Un dashboard interactivo y dinámico para la visualización y análisis avanzado de datos y rendimiento.</em>
+  </p>
+  <p>
+    <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+    <img src="https://img.shields.io/badge/ApexCharts-008FFB?style=for-the-badge&logo=apexcharts&logoColor=white" alt="ApexCharts">
+    <img src="https://img.shields.io/badge/FontAwesome-528DD7?style=for-the-badge&logo=fontawesome&logoColor=white" alt="FontAwesome">
+  </p>
+</div>
+
+---
 
 ¡Bienvenido al **Dashboard de Portafolio**! 🚀 Una aplicación web elegante, interactiva y responsiva diseñada para ofrecer una visión integral y dinámica de la gestión de portafolios de proyectos. Este dashboard visualiza métricas clave, el estado de los proyectos y la asignación de recursos, permitiendo a los gerentes de proyectos, equipos y stakeholders tomar decisiones informadas y basadas en datos.
 
